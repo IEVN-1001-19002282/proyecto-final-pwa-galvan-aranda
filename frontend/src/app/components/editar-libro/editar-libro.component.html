@@ -1,0 +1,69 @@
+<div class="bg-light">
+  <app-menuuser></app-menuuser>
+  <main>
+    <section class="jumbotron text-center my-1">
+      <div class="container">
+        <h1 class="jumbotron-heading text-center">
+          Disco nuevo
+        </h1>
+      </div>
+    </section>
+    <div class="container">
+      <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="messageOk != null">
+        <strong>{{messageOk}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="cerrarAlert1()"></button>
+      </div>
+      <div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="messageErr != null">
+        <strong>{{messageErr}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="cerrarAlert2()"></button>
+      </div>
+
+      <div class="py-2 d-flex justify-content-center">
+        <div>
+          <div class="form-group mb-3">
+            <label for="name">ID Producto</label>
+            <input class="form-control item" type="number" id="id" name="inputId" placeholder="ID" [(ngModel)]="libro.id_producto">
+          </div>
+          <div class="input-group mb-3">
+            <img [src]="imagen || no_disponible" class="card-img-top" alt="..." style="max-width: 350px;" height="250">
+          </div>
+          <div class="input-group mb-3">
+            <input type="file" class="form-control" accept="image/*" (change)="uploadImagen($event)">
+          </div>
+          <div class="form-group mb-3">
+            <label for="name">Nombre</label>
+            <input class="form-control item" type="name" id="name" name="inputName" placeholder="Nombre" [(ngModel)]="libro.nombre_producto">
+          </div>
+          <div class="form-group mb-3">
+            <label for="descripcion">Descripcion</label>
+            <textarea class="form-control" id="descripcion" name="inputDescripcion" placeholder="Descripcion" [(ngModel)]="libro.descripcion_producto"></textarea>
+          </div>
+          <div class="form-group mb-3">
+            <label for="name">Artista</label>
+            <input class="form-control item" type="text" id="artista" name="inputArtista" placeholder="Artista" [(ngModel)]="libro.artista_producto">
+          </div>
+          <div class="form-group mb-3">
+            <label for="name">Año</label>
+            <input class="form-control item" type="year" id="year" name="inputAño" placeholder="Año" [(ngModel)]="libro.ano_producto">
+          </div>
+          <div class="form-group mb-3">
+            <label for="precio">Precio</label>
+            <input class="form-control item" type="number" id="precio" name="inputPrecio" placeholder="0.0" [(ngModel)]="libro.precio_producto">
+          </div>
+          <div class="form-group mb-3">
+            <label for="name">Stock</label>
+            <input class="form-control item" type="number" id="stock" name="inputStock" placeholder="Stock" [(ngModel)]="libro.stock_producto">
+          </div>
+          <div class="form-group mb-3">
+            <label for="name">Estatus</label>
+            <input class="form-control item" type="boolean" id="estatus" name="inputEstatus" placeholder="Estatus" [(ngModel)]="libro.estatus_producto">
+          </div>
+          <div class="btn-group mb-3">
+            <button type="button" class="me-2 btn btn-outline-primary" (click)="actualizar()">Actualizar</button>
+            <button type="button" class="btn btn-outline-danger" (click)="cancelar()">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

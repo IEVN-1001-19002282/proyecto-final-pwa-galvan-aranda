@@ -1,0 +1,27 @@
+<div>
+  <app-menubar></app-menubar>
+  <div class="container">
+    <div class="container-fluid py-5 text-center">
+      <h1 class="display-5 fw-bold">Discos</h1>
+      <div class="py-3">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col" *ngFor="let disco of discos; let i = index">
+            <div class="card mb-4 box-shadow">
+              <img src="{{disco.imagen_producto}}" class="card-img-top" alt="..." height="250" width="100">
+              <div class="card-body">
+                <h5 class="card-title">{{disco.nombre_producto}}</h5>
+                <p class="card-text">{{disco.descripcion_producto}}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+
+
+
+
