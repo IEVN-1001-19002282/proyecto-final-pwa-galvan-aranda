@@ -1,10 +1,4 @@
-# Famp_Stack
+Equipo:
 
-Flask Angular MongoDb Python
-
-Famp_Stack
-
-- Bootstrap: https://getbootstrap.com/
-- Angular: https://angular.io/
-- Flask: https://flask.palletsprojects.com/en/2.0.x/
-- MongoDb: https://www.mongodb.com/es
+Aranda Granados Diego 
+Galván Muñoz Luis Leonel
